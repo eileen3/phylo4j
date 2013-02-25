@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'phylo4j.views.home', name='home'),
+    url(r'^$', 'phylo4j.views.home'),
     # url(r'^phylo4j/', include('phylo4j.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
