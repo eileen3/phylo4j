@@ -13,10 +13,12 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
+SITE_DIR = '/home/ec2-user/phylo4j/src/phylo4j'
+import site
+site.addsitedir(SITE_DIR)
 
 import os
 import sys
-SITE_DIR = '/home/ec2-user/phylo4j/src/phylo4j'
 sys.path.append(SITE_DIR)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phylo4j.settings")
@@ -24,9 +26,8 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phylo4j.settings")
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.
-import django.core.handlers.wsgi
-
-application = django.core.handlers.wsgi.WSGIHandler()
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
 
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
