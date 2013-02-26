@@ -13,7 +13,13 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
+SITE_DIR = '/home/ec2-user/phylo4j/src/phylo4j'
+import site
+site.addsitedir(SITE_DIR)
+
 import os
+import sys
+sys.path.append(SITE_DIR)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phylo4j.settings")
 
