@@ -21,7 +21,7 @@ import os
 import sys
 sys.path.append(SITE_DIR)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phylo4j.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phylo4j.core.settings")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
