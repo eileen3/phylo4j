@@ -101,7 +101,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'phylo4j.urls'
+# ROOT_URLCONF = 'phylo4j.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'phylo4j.wsgi.application'
