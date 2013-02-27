@@ -1,37 +1,25 @@
-{% extends "base.html" %}
+{% extends "base.djhtml" %}
 
 {% block content %}
 
 <div class="well">
-    <h1>Django, meet Bootstrap!</h1>
-    <p>The django-bootstrap-toolkit application allows for an easy integration of Django and Bootstrap.</p>
-    <p><a class="btn btn-primary" href="https://github.com/dyve/django-bootstrap-toolkit/">Check it out on GitHub &raquo;</a></p>
+    <h1 class='text-center'>phylo4j</h1>
 </div>
 
 <div class="row">
+    <h1 class='text-center'>Here's a random enzyme!</h1>
     <div class="span4">
-        <h2>{{ name }} </h2>
-
-        <p>Django is the excellent Python web framework that makes a programmer's life less repetitive.</p>
-
-        <p><a class="btn" href="http://www.djangoproject.com">View details &raquo;</a></p>
+        <p>Name:</p>
+        <h2>{{ name }}</h2>
     </div>
     <div class="span4">
-        <h2>Bootstrap</h2>
-
-        <p>Bootstrap is a beautiful CSS framework with an optional JavaScript add-on.</p>
-
-        <p><a class="btn" href="http://twitter.github.com/bootstrap/">View details &raquo;</a></p>
+        <p>Catalytic Activity:</p>
+        <h2>{{ catalytic_activity }}</h2>
     </div>
     <div class="span4">
-        <h2>django-bootstrap-toolkit</h2>
-
-        <p>Is just a simple hustle to get two kinds of awesome together.</p>
-
-        <p><a class="btn" href="https://github.com/dyve/django-bootstrap-toolkit/">View details &raquo;</a></p>
+        <p>Comments:</p>
+        <h2>{{ comment }}</h2>
     </div>
 </div>
-
-<p>A big thanks to all the people that worked on Django and Bootstrap.</p>
 
 {% endblock %}
