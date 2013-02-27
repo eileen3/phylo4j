@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="span4">
-        <h2>Django</h2>
+        <h2>{{ name }} </h2>
 
         <p>Django is the excellent Python web framework that makes a programmer's life less repetitive.</p>
 

@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, include, url
-from django.views.generic.simple import direct_to_template
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -7,7 +6,7 @@ from django.views.generic.simple import direct_to_template
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', direct_to_template, {'template': 'index.html'}, 'home'),
+    url(r'^$', 'phylo4j.core.views.index'),
     # url(r'^phylo4j/', include('phylo4j.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
