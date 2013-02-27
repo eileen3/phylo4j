@@ -15,3 +15,4 @@ class Enzyme(StructuredNode):
 	cofactors = StringProperty()
 	comments = StringProperty()
 	prosite_cross_references = StringProperty()
+
