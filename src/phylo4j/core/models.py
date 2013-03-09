@@ -5,21 +5,22 @@ from neomodel import StructuredNode, StringProperty, IntegerProperty, Relationsh
 
 #phylofacts tree classes
 
+class Tree(StructuredNode):
+    family_name = StringProperty(index=True)
+    root = RelationshipTo('_TreeNode', 'TREE_ROOT_NODE')
+
+
 class _TreeNode(StructuredNode):
-    parent = RelationshipFrom('_TreeNode', 'TREE_CONNECTION')
-    children = RelationshipTo('_TreeNode', 'TREE_CONNECTION')
-
-
-class TreeRootNode(_TreeNode):
-    tree_name = StringProperty()
+    parent = RelationshipFrom('_TreeNode', 'TREE_NODE_CONNECTION')
+    children = RelationshipTo('_TreeNode', 'TREE_NODE_CONNECTION')
 
 
 class TreeInternalNode(_TreeNode):
-    something = StringProperty()
+    something = StringProperty(index=True)
 
 
 class TreeLeafNode(_TreeNode):
-    taxon = StringProperty()
+    taxon = StringProperty(index=True)
 
 
 # imported models from bio4j: https://github.com/bio4j/Bio4j/tree/master/src/main/java/com/era7/bioinfo/bio4j/model/nodes
