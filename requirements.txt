@@ -1,4 +1,5 @@
 django
-uwsgi
+#uwsgi for production deployment
 neomodel
 django-bootstrap-toolkit
+biopython
