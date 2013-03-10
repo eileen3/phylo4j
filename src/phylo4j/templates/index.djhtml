@@ -8,18 +8,21 @@
 
 <div class="row">
     <h1 class='text-center'>Here's a random enzyme!</h1>
-    <div class="span4">
-        <p>Name:</p>
-        <h2>{{ name }}</h2>
-    </div>
-    <div class="span4">
-        <p>Catalytic Activity:</p>
-        <h2>{{ catalytic_activity }}</h2>
-    </div>
-    <div class="span4">
-        <p>Comments:</p>
-        <h2>{{ comment }}</h2>
+    <div class="span12 pagination-centered">
+        <canvas id="viewport" width="800" height="600"></canvas>
     </div>
 </div>
+
+<script language="javascript" type="text/javascript">
+    var sys = arbor.ParticleSystem();
+    sys.renderer = Renderer("#viewport")
+    sys.parameters({gravity:true});
+    sys.parameters({ friction: '1.0' })
+    var animals = sys.addNode('Animals',{'color':'red','shape':'dot','label':'Animals'});
+    var dog = sys.addNode('dog',{'color':'green','shape':'dot','label':'dog'});
+    var cat = sys.addNode('cat',{'color':'blue','shape':'dot','label':'cat'});
+    sys.addEdge(animals, dog);
+    sys.addEdge(animals, cat);
+</script>
 
 {% endblock %}

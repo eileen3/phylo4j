@@ -5,8 +5,8 @@ from phylo4j.core.models import Enzyme
 
 
 def index(request):
-    enzyme_index = '1.1.1.' + str(random.randint(0, 300))
-    enzyme = Enzyme.index.get(enzyme_id_index = enzyme_index)
-    return render_page(request, 'index', {'name': enzyme.official_name,
-                                'catalytic_activity': enzyme.catalytic_activity,
-                                'comment': enzyme.comments})
+    # enzyme_index = '1.1.1.' + str(random.randint(0, 300))
+    # enzyme = Enzyme.index.get(enzyme_id_index = enzyme_index)
+    return render_page(request, 'index', {'name': 'something',
+                                'catalytic_activity': 'something',
+                                'comment': 'something'})
