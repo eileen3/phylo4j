@@ -1,7 +1,7 @@
 import random
 
 from phylo4j.util.request import render_page
-from phylo4j.core.models import Enzyme
+from phylo4j.bio4j.models import Enzyme
 
 
 def index(request):
