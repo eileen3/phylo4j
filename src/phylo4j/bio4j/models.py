@@ -1,7 +1,6 @@
 import os
-os.environ['NEO4J_REST_URL'] = 'http://localhost:7474/db/data/'
-from neomodel import StructuredNode, StringProperty, IntegerProperty, RelationshipTo, RelationshipFrom
 
+from neomodel import StructuredNode, StringProperty, IntegerProperty, RelationshipTo, RelationshipFrom
 
 #phylofacts tree classes
 
@@ -25,42 +24,42 @@ class TreeLeafNode(_TreeNode):
 
 # imported models from bio4j: https://github.com/bio4j/Bio4j/tree/master/src/main/java/com/era7/bioinfo/bio4j/model/nodes
 
-class AlternativeProductNode(StructuredNode):
+class AlternativeProduct(StructuredNode):
     _index_name = 'alternative_product_name_index'
     alternative_product_name_index = StringProperty(index=True)
 
     name = StringProperty()
 
 
-class CityNode(StructuredNode):
+class City(StructuredNode):
     _index_name = 'city_name_index';
     city_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class CommentTypeNode(StructuredNode):
+class CommentType(StructuredNode):
     _index_name = 'comment_type_name_index';
     comment_type_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class ConsortiumNode(StructuredNode):
+class Consortium(StructuredNode):
     _index_name = 'consortium_name_index'
     consortium_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class CountryNode(StructuredNode):
+class Country(StructuredNode):
     _index_name = 'country_name_index'
     country_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class DatasetNode(StructuredNode):
+class Dataset(StructuredNode):
     _index_name = 'dataset_name_index'
     dataset_name_index = StringProperty(index=True)
     
@@ -81,13 +80,13 @@ class Enzyme(StructuredNode):
     prosite_cross_references = StringProperty()
 
 
-class FeatureTypeNode(StructuredNode):
+class FeatureType(StructuredNode):
     _index_name = 'feature_type_name_index'
     feature_type_name_index = StringProperty(index=True)
     name = StringProperty()
 
 
-class GoTermNode(StructuredNode):
+class GoTerm(StructuredNode):
     _index_name = 'go_term_id_index'
     go_term_id_index = StringProperty(index=True)
     
@@ -103,14 +102,14 @@ class GoTermNode(StructuredNode):
     cellular_component = StringProperty()
 
 
-class InstituteNode(StructuredNode):
+class Institute(StructuredNode):
     _index_name = 'institute_name_index'
     institute_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class InterproNode(StructuredNode):
+class Interpro(StructuredNode):
     _index_name = 'interpro_id_index'
     interpro_id_index = StringProperty(index=True)
     
@@ -118,7 +117,7 @@ class InterproNode(StructuredNode):
     name = StringProperty()
 
 
-class IsoformNode(StructuredNode):
+class Isoform(StructuredNode):
     _index_name = 'isoform_id_index'
     isoform_id_index = StringProperty(index=True)
     
@@ -128,7 +127,7 @@ class IsoformNode(StructuredNode):
     sequence = StringProperty()
 
 
-class KeywordNode(StructuredNode):
+class Keyword(StructuredNode):
     _index_name = 'keyword_id_index'
     keyword_id_index = StringProperty(index=True)
     
@@ -136,7 +135,7 @@ class KeywordNode(StructuredNode):
     name = StringProperty()
 
 
-class OrganismNode(StructuredNode):
+class Organism(StructuredNode):
     _index_name = 'organism_scientific_name_index'
     organism_scientific_name_index = StringProperty(index=True)
     #second index: 'organism_ncbi_taxonomy_id_index' included in OrganismNode.java
@@ -147,14 +146,14 @@ class OrganismNode(StructuredNode):
     ncbi_taxonomy_id  = StringProperty()
 
 
-class PersonNode(StructuredNode):
+class Person(StructuredNode):
     _index_name = 'person_name_full_text_index'
     person_name_full_text_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class PfamNode(StructuredNode):
+class Pfam(StructuredNode):
     _index_name = 'pfam_id_index'
     pfam_id_index = StringProperty(index=True)
     
@@ -162,7 +161,7 @@ class PfamNode(StructuredNode):
     name = StringProperty()
 
 
-class ProteinNode(StructuredNode):
+class Protein(StructuredNode):
     _index_name = 'protein_accession_index'
     protein_accession_index = StringProperty(index=True)
     #three additional indexes included: 
@@ -189,21 +188,21 @@ class ProteinNode(StructuredNode):
     emsembl_plants_references = StringProperty()
 
 
-class SequenceCautionNode(StructuredNode):
+class SequenceCaution(StructuredNode):
     _index_name = 'sequence_caution_name_index'
     sequence_caution_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class SubcellularLocationNode(StructuredNode):
+class SubcellularLocation(StructuredNode):
     _index_name = 'subcellular_location_name_index'
     subcellular_location_name_index = StringProperty(index=True)
     
     name = StringProperty()
 
 
-class TaxonNode(StructuredNode):
+class Taxon(StructuredNode):
     _index_name = 'taxon_name_index'
     taxon_name_index = StringProperty(index=True)
     
