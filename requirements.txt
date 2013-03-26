@@ -2,5 +2,8 @@ django
 #uwsgi for production deployment
 neomodel
 django-bootstrap-toolkit
-numpy
-biopython
+djangorestframework
+
+#only install the following for import scripts. Lookup requirements for each OS.
+#numpy 
+#biopython
