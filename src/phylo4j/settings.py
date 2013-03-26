@@ -155,3 +155,6 @@ LOGGING = {
         },
     }
 }
+
+#Set Neomodel Neo4j Rest Pointer
+os.environ['NEO4J_REST_URL'] = 'http://ec2-50-18-38-128.us-west-1.compute.amazonaws.com:7474/db/data'
