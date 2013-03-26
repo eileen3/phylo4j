@@ -1,4 +1,5 @@
 # Django settings for phylo4j project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -120,7 +121,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'phylo4j.website',
-	'bootstrap_toolkit'
+	'bootstrap_toolkit',
+    'rest_framework'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
