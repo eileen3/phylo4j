@@ -13,6 +13,13 @@ class _TreeNode(StructuredNode):
     parent = RelationshipFrom('_TreeNode', 'TREE_NODE_CONNECTION')
     children = RelationshipTo('_TreeNode', 'TREE_NODE_CONNECTION')
 
+    def mrca(self, *args):
+        if len(args) == 1:
+            result = self.cypher('START x=node(9),y=node(10) \
+                                  MATCH p=shortestPath(y-[:TREE_NODE_CONNECTION*]-x) \
+                                  RETURN FILTER ( n in nodes(p) : y<-[*]-(n)-[*]->x);')
+            return TreeInternalNode.inflate(result[0][0][0][0])
+
 
 class TreeInternalNode(_TreeNode):
     something = StringProperty(index=True)
